@@ -17,7 +17,7 @@ db = Chroma(
     embedding_function=embedding_model
 )
 
-query = "which island does SpaceX lease for its launches in the Pacific?"
+query = input()
 
 retriever = db.as_retriever(search_kwargs={"k":5})#Top 3 outcomes from files retrieved out...
 relevant_docs = retriever.invoke(query)#invoking query into retriever
